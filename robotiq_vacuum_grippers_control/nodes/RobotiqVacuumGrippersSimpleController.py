@@ -53,9 +53,9 @@ def genCommand(char, command):
     if char == 'a':
         command = outputMsg.RobotiqVacuumGrippers_robot_output();
         command.rACT = 1
-	command.rMOD = 0
+        command.rMOD = 0
         command.rGTO = 1
-	command.rPR = 0
+        command.rPR = 0
         command.rSP  = 150
         command.rFR  = 50
 
@@ -122,7 +122,7 @@ def askForCommand(command):
     currentCommand += ', rFR = '   + str(command.rFR )
 
 
-    print currentCommand
+    print(currentCommand)
 
     strAskForCommand  = '\n-----Available commands:\n\n'
     strAskForCommand += 'r: Reset\n'
@@ -138,7 +138,7 @@ def askForCommand(command):
     strAskForCommand += '0-255: Pressure request, ONLY VALID IN MANUAL MODE, i.e. when rMOD=0x01\n'
     strAskForCommand += '\n-->'
 
-    return raw_input(strAskForCommand)
+    return input(strAskForCommand)
 
 def publisher():
     """Main loop which requests new commands and publish them on the RobotiqVacuumGrippersRobotOutput topic."""
