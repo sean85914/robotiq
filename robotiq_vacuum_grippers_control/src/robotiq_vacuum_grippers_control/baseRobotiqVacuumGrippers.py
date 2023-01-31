@@ -119,6 +119,7 @@ class robotiqbaseRobotiqVacuumGrippers:
             message.gGTO = (status[0] >> 3) & 0x01;
             message.gSTA = (status[0] >> 4) & 0x03;
             message.gOBJ = (status[0] >> 6) & 0x03;
+            message.gVAS =  status[1] & 0x03
             message.gFLT =  status[2]
             message.gPR  =  status[3]
             message.gPO  =  status[4]
@@ -137,6 +138,7 @@ class robotiqbaseRobotiqVacuumGrippers:
             message.gGTO = (status[0] >> 3) & 0x01;
             message.gSTA = (status[0] >> 4) & 0x03;
             message.gOBJ = (status[0] >> 6) & 0x03;
+            message.gVAS =  status[1] & 0x03
             message.gFLT =  status[2]
             message.gPR  =  status[3]
             message.gPO  =  status[4]
